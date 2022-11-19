@@ -5,7 +5,6 @@
  */
 package utsstrukturdata;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -61,6 +60,7 @@ public class UtsStrukturData {
     }
 
     static void sort(int arr[]) {
+        //selection
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             int min_idx = i;
@@ -129,14 +129,19 @@ public class UtsStrukturData {
         Scanner valueKelas = new Scanner(System.in);
         Scanner valueTanggal = new Scanner(System.in);
         Scanner value = new Scanner(System.in);
+        
         mList.addAll(mahasiswaList);
+        
         System.out.println("Masukan Data Mahasiswa Untuk Ditambahkan");
         System.out.print("Masukan Id Mahasiswa : ");
         int id = valueId.nextInt();
+        
         System.out.print("Masukan Nama Mahasiswa : ");
         String name = valueName.nextLine();
+        
         System.out.print("Masukan Kelas Mahasiswa : ");
         String kelas = valueKelas.nextLine();
+        
         System.out.print("Masukan Tanggal : ");
         int tanggal = valueTanggal.nextInt();
 
@@ -147,7 +152,7 @@ public class UtsStrukturData {
         System.out.println("Masukan Data Mahasiswa Untuk Dihapus");
         System.out.print("Masukan Nama Mahasiswa : ");
         String nameRemove = value.nextLine();
-        mList.removeIf(mahasiswa -> mahasiswa.getName().contains(nameRemove));
+        mList.removeIf(mahasiswa -> mahasiswa.getName().equalsIgnoreCase(nameRemove));
         mList.forEach(mahasiswa -> System.out.println(mahasiswa.toString()));
 
     }
