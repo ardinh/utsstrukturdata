@@ -152,7 +152,7 @@ public class UtsStrukturData {
 
     }
 
-    public static void soal() throws IOException {
+    public static void soal(){
         int noSoal = 0;
         Scanner masukanSoal = new Scanner(System.in);
         String soal = "1. Buat 15 random array integer dan print semua datanya tentukan ganjil dan genap setiap\n"
@@ -191,7 +191,7 @@ public class UtsStrukturData {
         }
     }
 
-    static void next() throws IOException {
+    static void next(){
         Scanner lanjut = new Scanner(System.in);
         System.out.println("Lanjut Atau Tidak?");
         System.out.println("1. Yes\n" + "2. No");
@@ -205,7 +205,7 @@ public class UtsStrukturData {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         soal();
     }
 
